@@ -445,7 +445,7 @@
         
         <!-- NA GÓRZE: MAIL -->
         <div class="card-top">
-          <div class="card-badge">Collaby, Radio & Projekty</div>
+          <div class="card-badge">Collaby, media i projekty</div>
           <div class="card-email">swanwspolprace@gmail.com</div>
         </div>
 
@@ -492,11 +492,17 @@
 
     let toastTimeout;
     function copyEmail(email, button) {
+      // Zresetuj wszystkie poprzednio skopiowane przyciski
+      document.querySelectorAll('.btn-copy').forEach(btn => {
+        btn.classList.remove('copied');
+        const sp = btn.querySelector('span');
+        if (sp) sp.textContent = 'Kopiuj';
+      });
+
       navigator.clipboard.writeText(email).then(() => {
         const span = button.querySelector('span');
-        const origText = span.textContent;
         button.classList.add('copied');
-        span.textContent = 'Skopiowano!';
+        if (span) span.textContent = 'Skopiowano!';
 
         const toast = document.getElementById('toast');
         toast.classList.add('active');
@@ -505,7 +511,7 @@
         toastTimeout = setTimeout(() => {
           toast.classList.remove('active');
           button.classList.remove('copied');
-          span.textContent = origText;
+          if (span) span.textContent = 'Kopiuj';
         }, 2200);
       }).catch(err => {
         const tempInput = document.createElement('input');
@@ -515,11 +521,17 @@
         document.execCommand('copy');
         document.body.removeChild(tempInput);
 
+        const span = button.querySelector('span');
+        button.classList.add('copied');
+        if (span) span.textContent = 'Skopiowano!';
+
         const toast = document.getElementById('toast');
         toast.classList.add('active');
         clearTimeout(toastTimeout);
         toastTimeout = setTimeout(() => {
           toast.classList.remove('active');
+          button.classList.remove('copied');
+          if (span) span.textContent = 'Kopiuj';
         }, 2200);
       });
     }
