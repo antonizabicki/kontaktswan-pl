@@ -2,12 +2,12 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Kontakt Swana — Oficjalne adresy kontaktowe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt Swana</title>
   
-  <meta name="description" content="Oficjalne adresy kontaktowe Swana: agencja, współprace komercyjne, booking koncertów i radio.">
+  <meta name="description" content="Oficjalny kontakt do Swana — agencja, koncerty, booking oraz współprace.">
   <meta property="og:title" content="Kontakt Swana">
-  <meta property="og:description" content="Oficjalne adresy kontaktowe Swana. Skopiuj e-mail lub napisz bezpośrednio.">
+  <meta property="og:description" content="Oficjalne adresy kontaktowe Swana.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kontaktswan.pl/">
   <meta property="og:image" content="https://koncertswana.pl/OKLADKA.png">
@@ -15,33 +15,15 @@
 
   <link rel="icon" href="favicon.png">
 
-  <!-- Czcionki z koncertswana.pl -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Gloria+Hallelujah&family=Inter:wght@400;500;600;700;800;900&family=Patrick+Hand&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg-desk: #141210;
-      --paper-cream: #faf6ee;
-      --paper-yellow: #fef08a;
-      --paper-border: #dcd3c1;
-      --paper-lines: rgba(180, 160, 130, 0.16);
-      --ink-main: #1c1917;
-      --ink-muted: #57534e;
-      --ink-pencil: #78716c;
-      --primary-yellow: #ffd000;
-      --accent-red: #ef4444;
-      --washi-tape: rgba(246, 232, 192, 0.94);
-      --washi-border: rgba(180, 155, 110, 0.55);
-      --radius-paper: 14px;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      -webkit-tap-highlight-color: transparent;
     }
 
     html, body {
@@ -50,35 +32,35 @@
     }
 
     body {
-      background-color: var(--bg-desk);
+      background-color: #0e0d0b;
       background-image: 
-        radial-gradient(circle at 50% 18%, rgba(48, 40, 32, 0.65) 0%, rgba(14, 13, 11, 0.98) 100%),
+        radial-gradient(circle at 50% 20%, rgba(40, 34, 28, 0.6) 0%, rgba(10, 9, 8, 0.98) 100%),
         url('desk_texture.jpg');
       background-size: cover;
       background-position: center top;
       background-attachment: fixed;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+      -webkit-user-select: none;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      padding: 38px 16px 45px;
+      justify-content: space-between;
+      padding: 60px 20px 40px;
       overflow-x: hidden;
-      position: relative;
     }
 
-    /* Szum analogowy */
-    .noise-overlay {
+    /* Subtelny szum w stylu oryginalnej koncertswana */
+    .noise {
       position: fixed;
-      inset: -50%;
-      width: 200%;
-      height: 200%;
+      inset: 0;
       z-index: 1;
       pointer-events: none;
-      opacity: 0.024;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.02;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
     main {
@@ -86,163 +68,82 @@
       z-index: 2;
       width: 100%;
       max-width: 1100px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    /* ==========================================================================
-       NAGŁÓWEK / HERO W NOWYM DESIGNIE KONCERTSWANA.PL
-       ========================================================================== */
-    .header-section {
       text-align: center;
-      margin-bottom: 34px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
     }
 
-    .badge-notebook {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'Courier Prime', monospace;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: #f5f5f4;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px dashed rgba(255, 255, 255, 0.32);
-      border-radius: 6px;
-      padding: 5px 16px;
-      margin-bottom: 14px;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-    }
-    .badge-notebook .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #ffd000;
-      box-shadow: 0 0 10px #ffd000;
-    }
-
-    h1.hero-title {
-      font-family: 'Inter', sans-serif;
-      font-size: clamp(34px, 6.5vw, 72px);
+    /* Nagłówek identyczny jak na stronach Swana */
+    h1 {
+      font-size: clamp(52px, 9.5vw, 120px);
+      line-height: 0.85;
       font-weight: 900;
-      line-height: 1.0;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.065em;
       text-transform: uppercase;
       color: #ffffff;
-      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.85);
-      margin-bottom: 10px;
-      word-break: keep-all;
-    }
-    h1.hero-title span {
-      color: #ffd000;
-      position: relative;
-      display: inline-block;
-    }
-    h1.hero-title span::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 1px;
-      width: 100%;
-      height: 4px;
-      background: #ffd000;
-      border-radius: 2px;
-      opacity: 0.8;
+      margin-bottom: 48px;
     }
 
-    .hero-subtitle {
-      font-family: 'Caveat', cursive;
-      font-size: clamp(19px, 2.5vw, 25px);
-      font-weight: 600;
-      color: #d6d3d1;
-      letter-spacing: 0.5px;
-      max-width: 620px;
+    h1 span {
+      color: #ffd000;
     }
 
     /* ==========================================================================
-       TRZY KARTECZKI ROZŁOŻONE OBOK SIEBIE (WG SZKICU UŻYTKOWNIKA)
+       ROZKŁAD TRZECH KARTECZEK OBOK SIEBIE
        ========================================================================== */
     .cards-row {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: stretch;
-      gap: 12px;
-      margin-top: 10px;
-      margin-bottom: 38px;
-      position: relative;
+      gap: 20px;
+      margin-bottom: 44px;
     }
 
-    /* Pojedyncza karteczka papierowa */
     .paper-card {
       position: relative;
       flex: 1 1 0;
       min-width: 280px;
       max-width: 335px;
-      min-height: 385px;
-      background-color: var(--paper-cream);
-      background-image: 
-        linear-gradient(var(--paper-lines) 1px, transparent 1px);
+      min-height: 360px;
+      background-color: #faf6ee;
+      background-image: linear-gradient(rgba(180, 160, 130, 0.15) 1px, transparent 1px);
       background-size: 100% 28px;
-      border: 1px solid var(--paper-border);
-      border-radius: var(--radius-paper);
-      padding: 34px 20px 20px 24px;
+      border: 1px solid #dcd3c1;
+      border-radius: 12px;
+      padding: 34px 24px 24px;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
       justify-content: space-between;
-      color: var(--ink-main);
+      color: #1c1917;
       box-shadow: 
-        0 20px 45px rgba(0, 0, 0, 0.65),
-        0 4px 12px rgba(0, 0, 0, 0.35);
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, z-index 0.3s;
+        0 18px 45px rgba(0, 0, 0, 0.65),
+        0 3px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
       cursor: default;
-      will-change: transform, box-shadow;
     }
 
-    /* Czerwona pionowa linia marginesu jak w szkolnym zeszycie */
-    .paper-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 18px;
-      width: 2px;
-      background: rgba(239, 68, 68, 0.24);
-      pointer-events: none;
-    }
-
-    /* Washi tape u góry karteczki */
+    /* Taśma washi u góry */
     .washi-tape {
       position: absolute;
-      top: -14px;
+      top: -13px;
       left: 50%;
       transform: translateX(-50%);
-      width: 105px;
-      height: 27px;
-      background: var(--washi-tape);
-      border-left: 2px dashed var(--washi-border);
-      border-right: 2px dashed var(--washi-border);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
-      z-index: 10;
+      width: 100px;
+      height: 26px;
+      background: rgba(246, 232, 192, 0.94);
+      border-left: 2px dashed rgba(180, 155, 110, 0.55);
+      border-right: 2px dashed rgba(180, 155, 110, 0.55);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       pointer-events: none;
-      backdrop-filter: blur(1px);
     }
 
-    /* Rozłożenie karteczek wg rysunku:
-       - Lewa: pochylona w lewo (-4.5deg), lekko pod środkową
-       - Środkowa: na środku, uniesiona w górę, nachodzi z wierzchu na lewą i prawą (z-index 6)
-       - Prawa: pochylona w prawo (+4.5deg), lekko pod środkową */
+    /* Ułożenie kart ze szkicu: lewa, środek lekko uniesiony, prawa */
     .card-left {
-      transform: rotate(-4.2deg) translateY(12px);
+      transform: rotate(-3.5deg) translateY(6px);
       z-index: 2;
     }
     .card-left .washi-tape {
@@ -251,419 +152,270 @@
 
     .card-center {
       transform: rotate(0deg) translateY(-8px);
-      z-index: 6;
-      margin: 0 -10px; /* Delikatne nachodzenie jak na odręcznym rysunku */
-      background-color: var(--paper-yellow);
+      z-index: 3;
+      background-color: #fef08a;
       border-color: #facc15;
-      box-shadow: 
-        0 24px 55px rgba(0, 0, 0, 0.75),
-        0 6px 16px rgba(0, 0, 0, 0.4);
-    }
-    .card-center::before {
-      background: rgba(239, 68, 68, 0.3);
     }
     .card-center .washi-tape {
-      background: rgba(254, 240, 138, 0.96);
+      background: rgba(254, 240, 138, 0.95);
       border-left-color: rgba(180, 140, 50, 0.5);
       border-right-color: rgba(180, 140, 50, 0.5);
       transform: translateX(-50%) rotate(0.8deg);
     }
 
     .card-right {
-      transform: rotate(4.2deg) translateY(12px);
+      transform: rotate(3.5deg) translateY(6px);
       z-index: 2;
     }
     .card-right .washi-tape {
-      transform: translateX(-50%) rotate(2.2deg);
+      transform: translateX(-50%) rotate(2deg);
     }
 
-    /* Hover: Karteczka unosi się do góry na sam wierzch */
     .paper-card:hover {
-      transform: translateY(-16px) rotate(0deg) scale(1.035);
-      z-index: 30;
+      transform: translateY(-12px) rotate(0deg) scale(1.02);
+      z-index: 10;
       box-shadow: 
-        0 32px 75px rgba(0, 0, 0, 0.88),
-        0 8px 24px rgba(0, 0, 0, 0.45);
+        0 26px 60px rgba(0, 0, 0, 0.8),
+        0 6px 18px rgba(0, 0, 0, 0.35);
     }
 
     /* ==========================================================================
-       STRUKTURA WEWNĄTRZ KARTECZKI (WG RYSUNKU):
-       1. NA GÓRZE: MAIL + KATEGORIA
+       WYŚRODKOWANA ZAWARTOŚĆ KARTECZKI
+       1. NA GÓRZE: MAIL
        2. PO ŚRODKU: OPIS
        3. NA DOLE: KOPIUJ
        ========================================================================== */
 
-    /* 1. GÓRA: Kategoria i Mail */
+    /* 1. GÓRA: Mail + kategoria */
     .card-top {
-      margin-bottom: 14px;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
+      align-items: center;
+      text-align: center;
     }
 
     .card-badge {
-      display: inline-block;
-      font-family: 'Courier Prime', monospace;
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--ink-pencil);
-      background: rgba(0, 0, 0, 0.05);
-      border: 1px dashed rgba(120, 113, 108, 0.4);
-      padding: 3px 8px;
-      border-radius: 4px;
-    }
-
-    .card-email-box {
-      background: linear-gradient(104deg, rgba(255, 235, 59, 0.3) 0%, rgba(255, 235, 59, 0.8) 12%, rgba(255, 235, 59, 0.65) 88%, rgba(255, 235, 59, 0.25) 100%);
-      padding: 6px 9px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      max-width: 100%;
-      word-break: break-all;
-      border: 1px solid rgba(234, 179, 8, 0.35);
+      letter-spacing: 1.5px;
+      color: #78716c;
+      margin-bottom: 10px;
     }
 
     .card-email {
       font-family: 'Courier Prime', monospace;
-      font-size: clamp(14px, 1.25vw, 16px);
+      font-size: 16px;
       font-weight: 700;
       color: #0f0e0d;
-      letter-spacing: -0.3px;
-      line-height: 1.2;
+      letter-spacing: -0.2px;
+      word-break: break-all;
       user-select: all;
       -webkit-user-select: all;
-    }
-
-    .card-email-icon {
-      flex-shrink: 0;
-      color: #0f0e0d;
-      opacity: 0.85;
     }
 
     /* 2. ŚRODEK: Opis */
     .card-middle {
       flex: 1;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      padding: 10px 0 18px;
+      padding: 18px 0;
     }
 
     .card-desc {
       font-size: 14px;
-      line-height: 1.5;
-      color: var(--ink-muted);
+      line-height: 1.55;
+      color: #57534e;
       font-weight: 500;
+      max-width: 250px;
     }
 
-    .card-desc-handwritten {
-      font-family: 'Caveat', cursive;
-      font-size: 18.5px;
-      font-weight: 700;
-      line-height: 1.35;
-      color: #292524;
-      margin-top: 6px;
-    }
-
-    /* 3. DÓŁ: Przycisk Kopiuj */
+    /* 3. DÓŁ: Kopiuj */
     .card-bottom {
+      width: 100%;
       margin-top: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
     }
 
     .btn-copy {
       width: 100%;
+      height: 44px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
       background: #1c1917;
       color: #fbf9f4;
-      font-family: 'Caveat', 'Inter', cursive, sans-serif;
-      font-size: 19.5px;
+      font-family: inherit;
+      font-size: 13px;
       font-weight: 700;
-      text-transform: uppercase;
       letter-spacing: 0.5px;
-      padding: 12px 16px;
-      border-radius: 7px;
-      border: 1.5px solid #1c1917;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-      transition: all 0.16s ease;
+      transition: background 0.15s ease, transform 0.15s ease, color 0.15s ease;
       outline: none;
     }
 
     .btn-copy:hover {
-      background: #332f2c;
-      color: #ffffff;
+      background: #ffd000;
+      color: #000000;
       transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
     }
 
     .btn-copy:active {
       transform: translateY(1px);
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
-    /* Stan po kliknięciu (skopiowano) */
     .btn-copy.copied {
-      background: #15803d !important;
-      border-color: #15803d !important;
-      color: #ffffff !important;
-      box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4) !important;
-    }
-
-    .btn-mailto {
-      font-family: 'Inter', sans-serif;
-      font-size: 11.5px;
-      font-weight: 600;
-      color: var(--ink-pencil);
-      text-decoration: none;
-      text-align: center;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-      padding: 3px;
-      transition: color 0.15s;
-    }
-    .btn-mailto:hover {
-      color: #0f0e0d;
-      text-decoration: underline;
-    }
-
-    /* ==========================================================================
-       POD KARTECZKAMI: "-> PRZEJDZ NA STRONE KONCERTOWA" (WG RYSUNKU)
-       ========================================================================== */
-    .concert-link-container {
-      width: 100%;
-      max-width: 680px;
-      margin: 10px auto 32px;
-      text-align: center;
-    }
-
-    .concert-banner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      background: rgba(28, 25, 23, 0.88);
-      border: 1.5px dashed rgba(255, 208, 0, 0.6);
-      border-radius: 12px;
-      padding: 16px 24px;
-      text-decoration: none;
-      color: #ffffff;
-      box-shadow: 
-        0 16px 36px rgba(0, 0, 0, 0.7),
-        0 2px 8px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(10px);
-      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
-    }
-
-    .concert-banner .banner-tape {
-      position: absolute;
-      top: -10px;
-      left: 28px;
-      width: 70px;
-      height: 20px;
-      background: rgba(255, 208, 0, 0.8);
-      border-left: 2px dashed rgba(160, 120, 20, 0.5);
-      border-right: 2px dashed rgba(160, 120, 20, 0.5);
-      transform: rotate(-2deg);
-      pointer-events: none;
-    }
-
-    .concert-banner:hover {
-      transform: translateY(-4px) scale(1.015);
-      border-color: #ffd000;
-      background: rgba(38, 34, 30, 0.96);
-      box-shadow: 
-        0 22px 46px rgba(0, 0, 0, 0.85),
-        0 0 24px rgba(255, 208, 0, 0.25);
-    }
-
-    .concert-banner-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      text-align: left;
-    }
-
-    .concert-arrow-sketch {
-      font-family: 'Caveat', cursive;
-      font-size: 34px;
-      color: #ffd000;
-      line-height: 1;
-      transform: translateY(-2px);
-      transition: transform 0.2s ease;
-    }
-    .concert-banner:hover .concert-arrow-sketch {
-      transform: translateX(4px);
-    }
-
-    .concert-text-primary {
-      font-family: 'Caveat', 'Gloria Hallelujah', cursive;
-      font-size: clamp(20px, 2.5vw, 26px);
-      font-weight: 700;
-      color: #ffd000;
-      line-height: 1.15;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .concert-text-sub {
-      font-family: 'Inter', sans-serif;
-      font-size: 13px;
-      color: #a8a29e;
-      font-weight: 500;
-      margin-top: 2px;
-    }
-
-    .concert-badge-btn {
-      font-family: 'Inter', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       background: #ffd000;
-      color: #0f0e0d;
-      padding: 9px 18px;
-      border-radius: 6px;
-      white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(255, 208, 0, 0.3);
-      transition: all 0.2s ease;
-    }
-    .concert-banner:hover .concert-badge-btn {
-      background: #ffe04d;
-      transform: scale(1.04);
+      color: #000000;
     }
 
     /* ==========================================================================
-       DODATKOWE LINKI & STOPKA
+       PRZEJDŹ NA STRONĘ KONCERTOWĄ (LINK WG SZKICU)
        ========================================================================== */
-    .extra-links {
+    .concert-action {
+      margin-bottom: 28px;
+    }
+
+    .btn-concert {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      background: #ffd000;
+      color: #070707;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      transition: background 0.15s ease, transform 0.15s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-concert:hover {
+      background: #ffe04d;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Przycisk YouTube z oryginalnej koncertswana */
+    .youtube {
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #070707;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: background 0.15s ease, transform 0.15s ease;
+      margin-bottom: 20px;
+    }
+
+    .youtube:hover {
+      background: #ffd000;
+      transform: translateY(-1px);
+    }
+
+    .yt-icon {
+      width: 20px;
+      height: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
+      flex-shrink: 0;
     }
 
-    .yt-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 10px 20px;
-      border-radius: 30px;
-      color: #e7e5e4;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      transition: all 0.2s ease;
-    }
-    .yt-pill:hover {
-      background: rgba(255, 0, 0, 0.14);
-      border-color: rgba(255, 0, 0, 0.4);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-    .yt-pill svg {
+    .yt-icon svg {
       width: 20px;
       height: 20px;
       fill: #ff0000;
     }
 
-    .shop-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 10px 20px;
-      border-radius: 30px;
-      color: #e7e5e4;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      transition: all 0.2s ease;
-    }
-    .shop-pill:hover {
-      background: rgba(255, 208, 0, 0.12);
-      border-color: rgba(255, 208, 0, 0.4);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-
-    footer.site-footer {
+    /* Stopka jak w koncertswana */
+    .site-footer {
       position: relative;
       z-index: 2;
+      width: 100%;
       text-align: center;
-      margin-top: auto;
-      padding-top: 10px;
-      font-size: 12.5px;
-      color: rgba(255, 255, 255, 0.45);
-      font-family: 'Inter', sans-serif;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: 40px;
     }
-    footer.site-footer a {
-      color: rgba(255, 255, 255, 0.65);
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
-      margin: 0 6px;
-      transition: color 0.15s;
+      transition: color 0.15s ease;
     }
-    footer.site-footer a:hover {
+
+    .footer-links a:hover {
       color: #ffd000;
     }
 
-    /* TOAST (POWIADOMIENIE) */
+    .footer-links .sep {
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 12px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    /* Toast Notification z oryginalnej strony */
     .toast {
       position: fixed;
-      bottom: 28px;
+      bottom: 30px;
       left: 50%;
       transform: translateX(-50%) translateY(100px);
       background: #ffd000;
-      color: #0f0e0d;
-      padding: 13px 26px;
+      color: #080808;
+      padding: 12px 24px;
       border-radius: 30px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      font-size: 14.5px;
-      letter-spacing: 0.2px;
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.75);
-      z-index: 99999;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      z-index: 9999;
       opacity: 0;
-      transition: all 0.32s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       pointer-events: none;
       display: flex;
       align-items: center;
-      gap: 10px;
-      white-space: nowrap;
+      gap: 8px;
     }
     .toast.active {
       transform: translateX(-50%) translateY(0);
       opacity: 1;
     }
 
-    /* RESPONSYWNOŚĆ */
-    @media (max-width: 960px) {
+    @media (max-width: 920px) {
       .cards-row {
         flex-direction: column;
         align-items: center;
-        gap: 36px;
+        gap: 32px;
       }
       .paper-card {
-        min-width: 0;
-        max-width: 335px;
+        max-width: 340px;
         width: 100%;
         min-height: auto;
       }
@@ -672,263 +424,184 @@
       }
       .card-center {
         transform: rotate(1deg);
-        margin: 0;
       }
       .card-right {
         transform: rotate(-1.2deg);
-      }
-      .paper-card:hover {
-        transform: translateY(-6px) scale(1.015);
-      }
-      .concert-banner {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-      }
-      .concert-banner-left {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-      }
-      .concert-arrow-sketch {
-        display: none;
       }
     }
 
     @media (max-width: 480px) {
       body {
-        padding: 28px 12px 35px;
+        padding: 40px 16px 30px;
       }
-      h1.hero-title {
-        font-size: clamp(28px, 8.5vw, 36px);
-      }
-      .hero-subtitle {
-        font-size: 18px;
-        line-height: 1.35;
-        padding: 0 8px;
+      h1 {
+        margin-bottom: 36px;
       }
       .paper-card {
-        padding: 28px 14px 16px 18px;
-        max-width: 320px;
-        width: calc(100% - 10px);
-      }
-      .paper-card::before {
-        left: 14px;
+        padding: 30px 18px 20px;
       }
       .card-email {
-        font-size: 13.5px;
+        font-size: 14.5px;
       }
-      .btn-copy {
-        font-size: 18px;
-        padding: 11px 12px;
+      .btn-concert {
+        width: 100%;
+        justify-content: center;
+        padding: 13px 20px;
+        font-size: 13px;
       }
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false">
 
-  <div class="noise-overlay"></div>
+  <div class="noise"></div>
 
   <main>
-    <!-- GŁÓWNY NAGŁÓWEK -->
-    <header class="header-section">
-      <div class="badge-notebook">
-        <span class="dot"></span>
-        <span>OFICJALNE ADRESY KONTAKTOWE</span>
-      </div>
-      <h1 class="hero-title">kontakt <span>swana</span></h1>
-      <p class="hero-subtitle">Wybierz odpowiednią sprawę i skopiuj e-mail lub napisz bezpośrednio</p>
-    </header>
+    <h1>kontakt<br><span>swana</span></h1>
 
-    <!-- TRZY KARTECZKI OBOK SIEBIE (ROZŁOŻONE DOKŁADNIE WG SZKICU) -->
+    <!-- TRZY KARTECZKI OBOK SIEBIE (WG SZKICU, WYŚRODKOWANE) -->
     <div class="cards-row">
       
-      <!-- 1. KARTECZKA: Agencja & Współprace (Lewa - pochylona w lewo) -->
+      <!-- 1. KARTECZKA: Agencja & Współprace -->
       <article class="paper-card card-left">
         <div class="washi-tape"></div>
         
-        <!-- NA GÓRZE: MAIL + KATEGORIA -->
+        <!-- NA GÓRZE: MAIL -->
         <div class="card-top">
-          <span class="card-badge">01 • Agencja & Współprace</span>
-          <div class="card-email-box" title="swan@sayflu.com">
-            <svg class="card-email-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-            </svg>
-            <span class="card-email">swan@sayflu.com</span>
-          </div>
+          <div class="card-badge">Agencja & Współprace</div>
+          <div class="card-email">swan@sayflu.com</div>
         </div>
 
         <!-- PO ŚRODKU: OPIS -->
         <div class="card-middle">
           <p class="card-desc">Kampanie reklamowe, oferty sponsorskie i współprace komercyjne.</p>
-          <div class="card-desc-handwritten">Oferty biznesowe & agencyjne ✍️</div>
         </div>
 
         <!-- NA DOLE: KOPIUJ -->
         <div class="card-bottom">
-          <button class="btn-copy" onclick="copyEmail('swan@sayflu.com', this)" aria-label="Kopiuj adres swan@sayflu.com">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <button class="btn-copy" onclick="copyEmail('swan@sayflu.com', this)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
             </svg>
-            <span>KOPIUJ E-MAIL</span>
+            <span>Kopiuj</span>
           </button>
-          <a href="mailto:swan@sayflu.com" class="btn-mailto">
-            lub napisz wiadomość w programie ↗
-          </a>
         </div>
       </article>
 
-      <!-- 2. KARTECZKA: Koncerty & Sprawy Oficjalne (Środkowa - żółta w centrum) -->
+      <!-- 2. KARTECZKA: Koncerty & Sprawy Oficjalne -->
       <article class="paper-card card-center">
         <div class="washi-tape"></div>
         
-        <!-- NA GÓRZE: MAIL + KATEGORIA -->
+        <!-- NA GÓRZE: MAIL -->
         <div class="card-top">
-          <span class="card-badge">02 • Koncerty & Oficjalny</span>
-          <div class="card-email-box" title="kontakt@koncertswana.pl">
-            <svg class="card-email-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-            </svg>
-            <span class="card-email">kontakt@koncertswana.pl</span>
-          </div>
+          <div class="card-badge">Koncerty & Sprawy Oficjalne</div>
+          <div class="card-email">kontakt@koncertswana.pl</div>
         </div>
 
         <!-- PO ŚRODKU: OPIS -->
         <div class="card-middle">
-          <p class="card-desc">Booking koncertowy, organizacja wydarzeń, występy na żywo i kontakt ogólny.</p>
-          <div class="card-desc-handwritten">Koncerty, festiwale i booking 🎤</div>
+          <p class="card-desc">Booking koncertowy, organizacja wydarzeń i kontakt ogólny.</p>
         </div>
 
         <!-- NA DOLE: KOPIUJ -->
         <div class="card-bottom">
-          <button class="btn-copy" onclick="copyEmail('kontakt@koncertswana.pl', this)" aria-label="Kopiuj adres kontakt@koncertswana.pl">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <button class="btn-copy" onclick="copyEmail('kontakt@koncertswana.pl', this)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
             </svg>
-            <span>KOPIUJ E-MAIL</span>
+            <span>Kopiuj</span>
           </button>
-          <a href="mailto:kontakt@koncertswana.pl" class="btn-mailto">
-            lub napisz wiadomość w programie ↗
-          </a>
         </div>
       </article>
 
-      <!-- 3. KARTECZKA: Collaby, Radio & Projekty (Prawa - pochylona w prawo) -->
+      <!-- 3. KARTECZKA: Collaby, Radio & Media -->
       <article class="paper-card card-right">
         <div class="washi-tape"></div>
         
-        <!-- NA GÓRZE: MAIL + KATEGORIA -->
+        <!-- NA GÓRZE: MAIL -->
         <div class="card-top">
-          <span class="card-badge">03 • Radio, Collaby & Media</span>
-          <div class="card-email-box" title="swanwspolprace@gmail.com">
-            <svg class="card-email-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-            </svg>
-            <span class="card-email">swanwspolprace@gmail.com</span>
-          </div>
+          <div class="card-badge">Collaby, Radio & Projekty</div>
+          <div class="card-email">swanwspolprace@gmail.com</div>
         </div>
 
         <!-- PO ŚRODKU: OPIS -->
         <div class="card-middle">
-          <p class="card-desc">Współprace poza reklamami, stacje radiowe, wywiady, podcasty i media.</p>
-          <div class="card-desc-handwritten">Kreatywne projekty & wywiady 📻</div>
+          <p class="card-desc">Współprace poza reklamami, kontakt dla stacji radiowych, wywiady i media.</p>
         </div>
 
         <!-- NA DOLE: KOPIUJ -->
         <div class="card-bottom">
-          <button class="btn-copy" onclick="copyEmail('swanwspolprace@gmail.com', this)" aria-label="Kopiuj adres swanwspolprace@gmail.com">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <button class="btn-copy" onclick="copyEmail('swanwspolprace@gmail.com', this)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
             </svg>
-            <span>KOPIUJ E-MAIL</span>
+            <span>Kopiuj</span>
           </button>
-          <a href="mailto:swanwspolprace@gmail.com" class="btn-mailto">
-            lub napisz wiadomość w programie ↗
-          </a>
         </div>
       </article>
 
     </div>
 
-    <!-- SEKCJA ZE SZKICU: "-> PRZEJDZ NA STRONE KONCERTOWA" -->
-    <div class="concert-link-container">
-      <a href="https://koncertswana.pl" class="concert-banner" title="Odwiedź koncertswana.pl">
-        <div class="banner-tape"></div>
-        <div class="concert-banner-left">
-          <div class="concert-arrow-sketch">⤷ ➔</div>
-          <div>
-            <div class="concert-text-primary">PRZEJDŹ NA STRONĘ KONCERTOWĄ</div>
-            <div class="concert-text-sub">Zobacz interaktywny zeszyt: Od zera do pierwszego koncertu bez wytwórni</div>
-          </div>
-        </div>
-        <div class="concert-badge-btn">
-          koncertswana.pl ↗
-        </div>
+    <!-- LINK DO STRONY KONCERTOWEJ WG SZKICU -->
+    <div class="concert-action">
+      <a class="btn-concert" href="https://koncertswana.pl" target="_blank" rel="noopener noreferrer">
+        Przejdź na stronę koncertową &rarr;
       </a>
     </div>
 
-    <!-- DODATKOWE LINKI (YOUTUBE, SKLEP) -->
-    <div class="extra-links">
-      <a class="yt-pill" href="https://www.youtube.com/@nieprzemyslane" target="_blank" rel="noopener noreferrer">
+    <!-- PRZYCISK YOUTUBE -->
+    <a class="youtube" href="https://www.youtube.com/@nieprzemyslane" target="_blank" rel="noopener noreferrer">
+      <span class="yt-icon">
         <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.8V8.2l6.4 3.8-6.4 3.8z"/></svg>
-        <span>@nieprzemyslane</span>
-      </a>
-
-      <a class="shop-pill" href="https://sklep.swaniczi.pl/" target="_blank" rel="noopener noreferrer">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span>Oficjalny Sklep</span>
-      </a>
-    </div>
+      </span>
+      <span>@nieprzemyslane</span>
+    </a>
   </main>
 
-  <!-- STOPKA -->
   <footer class="site-footer">
-    <div>
-      <a href="https://koncertswana.pl">Koncert Swana</a> • 
-      <a href="https://sklep.swaniczi.pl/">Sklep</a> • 
-      <a href="https://www.youtube.com/@nieprzemyslane">YouTube</a>
+    <div class="footer-links">
+      <a href="https://koncertswana.pl" target="_blank" rel="noopener noreferrer">Koncert Swana</a>
+      <span class="sep">&bull;</span>
+      <a href="https://sklep.swaniczi.pl/" target="_blank" rel="noopener noreferrer">Sklep</a>
+      <span class="sep">&bull;</span>
+      <a href="https://www.youtube.com/@nieprzemyslane" target="_blank" rel="noopener noreferrer">YouTube</a>
     </div>
-    <div style="margin-top: 8px; opacity: 0.65;">&copy; 2026 Swan. Wszelkie prawa zastrzeżone.</div>
+    <div class="footer-copy">&copy; 2026 Swan. Wszelkie prawa zastrzeżone.</div>
   </footer>
 
-  <!-- TOAST NOTIFICATION -->
-  <div class="toast" id="toast" role="status" aria-live="polite">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="20 6 9 17 4 12"></polyline>
-    </svg>
-    <span id="toast-text">Skopiowano adres e-mail!</span>
+  <div class="toast" id="toast">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span>Skopiowano adres e-mail!</span>
   </div>
 
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script>
-    let toastTimer;
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
 
-    function copyEmail(email, buttonElement) {
-      if (navigator.vibrate) {
-        try { navigator.vibrate(30); } catch(e) {}
-      }
-
+    let toastTimeout;
+    function copyEmail(email, button) {
       navigator.clipboard.writeText(email).then(() => {
-        const textSpan = buttonElement.querySelector('span');
-        const prevText = textSpan.textContent;
-        buttonElement.classList.add('copied');
-        textSpan.textContent = 'SKOPIOWANO! ✓';
+        const span = button.querySelector('span');
+        const origText = span.textContent;
+        button.classList.add('copied');
+        span.textContent = 'Skopiowano!';
 
         const toast = document.getElementById('toast');
-        const toastText = document.getElementById('toast-text');
-        toastText.textContent = 'Skopiowano: ' + email;
         toast.classList.add('active');
 
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => {
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
           toast.classList.remove('active');
-          buttonElement.classList.remove('copied');
-          textSpan.textContent = prevText;
+          button.classList.remove('copied');
+          span.textContent = origText;
         }, 2200);
       }).catch(err => {
         const tempInput = document.createElement('input');
@@ -939,11 +612,9 @@
         document.body.removeChild(tempInput);
 
         const toast = document.getElementById('toast');
-        const toastText = document.getElementById('toast-text');
-        toastText.textContent = 'Skopiowano: ' + email;
         toast.classList.add('active');
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => {
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
           toast.classList.remove('active');
         }, 2200);
       });
